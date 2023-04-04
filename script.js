@@ -6,7 +6,13 @@ $(".nav-tabs-dropdown")
     $(this).closest("ul").toggleClass("open");
   });
 
-// let selectItem = document.querySelectorAll(".SliderItem");
-// selectItem.addEventListener("click", function (event) {
-//   event.DefaultPropagation();
-// });
+let navBar = document.querySelector(".navbar-icon-box");
+let navItems = document.querySelector(".navbar-list-hidden");
+// console.log((navItems.style.display = "none"));
+navBar.addEventListener("click", function () {
+  if (navItems.style.display === "none") {
+    navItems.style.display = "flex";
+  } else {
+    navItems.style.display = "none";
+  }
+});
