@@ -1,3 +1,12 @@
+/* some universal color */
+
+:root {
+  --light-cyan: #64ffda;
+  --light-gray: #c8d2f2;
+  --light-cream: #8892b0;
+}
+
+/* Universal CSS Code Start */
 * {
   margin: 0%;
   padding: 0%;
@@ -12,6 +21,10 @@
   background: #0a192f;
   font-family: monospace;
 }
+
+/* Universal CSS Code Ends */
+
+/* Header Start From Here */
 
 header {
   width: 100%;
@@ -38,22 +51,21 @@ header {
   align-items: end;
 }
 
-.nav-icon-1 {
+.nav-icon {
+  background-color: var(--light-cyan);
   height: 2px;
+}
+
+.nav-icon-1 {
   width: 30px;
-  background-color: #64ffda;
 }
 
 .nav-icon-2 {
-  height: 2px;
   width: 20px;
-  background-color: #64ffda;
 }
 
 .nav-icon-3 {
-  height: 2px;
   width: 10px;
-  background-color: #64ffda;
 }
 
 .navbar-list ul {
@@ -65,16 +77,16 @@ header {
 
 .navbar-list ul li a {
   text-decoration: none;
-  color: #c8d2f2;
+  color: var(--light-gray);
   transition: all 0.2s ease-in-out;
 }
 
 .navbar-list ul li:hover a {
-  color: #64ffda;
+  color: var(--light-cyan);
 }
 
 .navbar-list ul li span {
-  color: #64ffda;
+  color: var(--light-cyan);
 }
 .navbar-list ul .first-navbar-item {
   animation-delay: 0.1s;
@@ -90,9 +102,9 @@ header {
 }
 
 .header-btn {
-  border: 1px solid #64ffda;
+  border: 1px solid var(--light-cyan);
   background: transparent;
-  color: #64ffda;
+  color: var(--light-cyan);
   padding: 10px 15px;
   border-radius: 3px;
   cursor: pointer;
@@ -103,9 +115,19 @@ header {
 .header-btn:hover {
   background-color: #64ffdb14;
 }
+/* Header Ends Here */
 
-/* ================= First Section ==================*/
+/* Drop Down Item Start Here */
+.navbar-icon-box {
+  display: none;
+}
 
+.navbar-list-hidden {
+  display: none;
+}
+/* Drop Down Item Ends Here */
+
+/* Home Section Start From Here */
 .myself {
   width: 80%;
   margin: 100px auto 0px auto;
@@ -119,23 +141,23 @@ header {
 
 .intro {
   font-size: 1.1rem;
-  color: #64ffda;
+  color: var(--light-cyan);
   opacity: 0.9;
 }
 
 .name {
   font-size: 4rem;
-  color: #ccd6f6;
+  color: var(--light-gray);
 }
 
 .myskills {
-  color: #8892b0;
+  color: var(--light-cream);
   font-size: 4rem;
 }
 
 .home-para {
   width: 50%;
-  color: #8892b0;
+  color: var(--light-cream);
   line-height: 1.7rem;
   font-size: 1rem;
   text-align: justify;
@@ -143,7 +165,7 @@ header {
 }
 
 .home-para span {
-  color: #64ffda;
+  color: var(--light-cyan);
   position: relative;
 }
 
@@ -152,7 +174,7 @@ header {
   transform: scaleX(0);
   display: inline-block;
   height: 1px;
-  background-color: #64ffda;
+  background-color: var(--light-cyan);
   position: absolute;
   top: 100%;
   left: 0%;
@@ -167,10 +189,10 @@ header {
 }
 
 .home-btn {
-  border: 1px solid #64ffda;
+  border: 1px solid var(--light-cyan);
   padding: 15px 30px;
   background: transparent;
-  color: #64ffda;
+  color: var(--light-cyan);
   font-size: 0.9rem;
   opacity: 0.9;
   max-width: 30%;
@@ -183,26 +205,25 @@ header {
 .home-btn:hover {
   background-color: #64ffdb14;
 }
+/* Home Section Ends Here */
 
-/*=============== social icon fixed ===============*/
-
+/* Left Social Icon Fixed */
 .left-social-icons {
   position: fixed;
-  /* top: 50%; */
   bottom: 0%;
   left: 2%;
 }
 
 .left-social-icons ul li a svg {
   width: 20px;
-  color: #8892b0;
+  color: var(--light-cream);
   position: relative;
   transition: all 0.2s ease-in-out;
 }
 
 .left-social-icons ul li a svg:hover {
   width: 20px;
-  color: #64ffda;
+  color: var(--light-cyan);
   position: relative;
   transform: translateY(-3px);
 }
@@ -222,11 +243,11 @@ header {
   display: inline-block;
   width: 1.5px;
   height: 100px;
-  background-color: #8892b0;
+  background-color: var(--light-cream);
 }
+/* Left Side Social Media Icons */
 
-/* ================ Right Gmail =============== */
-
+/* Right Side Gmail Text */
 .right-gmail-container {
   position: fixed;
   top: 72%;
@@ -252,14 +273,14 @@ header {
 }
 
 .mygmail p a {
-  color: #8892b0;
+  color: var(--light-cream);
   text-decoration: none;
   font-size: 0.96rem;
   transition: all 0.2s ease-in-out;
 }
 
 .mygmail p a:hover {
-  color: #64ffda;
+  color: var(--light-cyan);
 }
 
 .mygmail::after {
@@ -267,12 +288,12 @@ header {
   display: inline-block;
   width: 1.5px;
   height: 100px;
-  background-color: #8892b0;
+  background-color: var(--light-cream);
   transform: rotateZ(-90deg);
 }
+/* Right Side Gmail Text */
 
-/* about section */
-
+/* About Section Start Here */
 #about {
   height: 100vh;
   width: 100vw;
@@ -289,12 +310,12 @@ header {
   align-items: center;
   gap: 20px;
   font-size: 1.7rem;
-  color: #c8d2f2;
+  color: var(--light-gray);
 }
 
 .sectionHeading span {
   font-size: 1.2rem;
-  color: #64ffda;
+  color: var(--light-cyan);
   font-weight: 400;
 }
 
@@ -321,7 +342,7 @@ header {
 
 .about-para p {
   text-align: justify;
-  color: #8892b0;
+  color: var(--light-cream);
   font-size: 1rem;
   line-height: 1.5rem;
   opacity: 0.9;
@@ -329,7 +350,7 @@ header {
 }
 
 .about-para p span {
-  color: #64ffda;
+  color: var(--light-cyan);
   position: relative;
 }
 
@@ -338,7 +359,7 @@ header {
   transform: scaleX(0);
   display: inline-block;
   height: 1px;
-  background-color: #64ffda;
+  background-color: var(--light-cyan);
   position: absolute;
   top: 100%;
   left: 0%;
@@ -362,7 +383,7 @@ header {
 }
 
 .about-list li {
-  color: #8892b0;
+  color: var(--light-cream);
   font-family: monospace;
   font-size: 0.9rem;
 }
@@ -370,11 +391,9 @@ header {
 .about-list li::before {
   content: "▹";
   display: inline-block;
-  color: #64ffda;
+  color: var(--light-cyan);
   margin-right: 10px;
 }
-
-/* right div */
 
 .my-photo {
   width: 40%;
@@ -382,14 +401,14 @@ header {
 }
 
 .my-image-container {
-  width: 300px;
+  max-width: 300px;
   height: 300px;
 }
 
 .my-image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: inherit;
+  width: 300px;
+  height: 300px;
+  object-fit: revert;
   border-radius: 4px;
   position: relative;
   z-index: 2;
@@ -424,9 +443,9 @@ header {
 .me-photo:hover .my-image-container::after {
   -webkit-transform: translateX(-10px) translateY(-10px);
 }
+/* About Section Ends Here */
 
-/* not my code */
-
+/* Work Section Start Here */
 #work {
   width: 100vw;
   height: 100vh;
@@ -457,18 +476,18 @@ header {
 .workButton a {
   font-size: 0.9rem;
   background: transparent;
-  color: #64ffda;
+  color: var(--light-cyan);
   text-decoration: none;
   list-style: none;
 }
 
 .work-box-1 h2 {
   font-size: 1.3rem;
-  color: #c8d2f2;
+  color: var(--light-gray);
 }
 
 .work-box-1 h2 span {
-  color: #64ffda;
+  color: var(--light-cyan);
   position: relative;
 }
 
@@ -477,7 +496,7 @@ header {
   transform: scaleX(0);
   display: inline-block;
   height: 1px;
-  background-color: #64ffda;
+  background-color: var(--light-cyan);
   position: absolute;
   top: 100%;
   left: 0%;
@@ -499,7 +518,7 @@ header {
 
 .slider-box a {
   text-decoration: none;
-  color: #64ffda;
+  color: var(--light-cyan);
 }
 
 .slider-box li {
@@ -509,10 +528,10 @@ header {
 
 .slider-box li::before {
   content: "";
-  border-color: #64ffda;
+  border-color: var(--light-cyan);
   border-width: 1.3px;
   border-style: solid;
-  height: 33%;
+  height: 16%;
   top: 0%;
   left: -2%;
   position: absolute;
@@ -520,7 +539,7 @@ header {
 
 .slider-box li:hover {
   background-color: #112240;
-  color: #64ffda;
+  color: var(--light-cyan);
 }
 
 .work-box-1 ul {
@@ -533,21 +552,21 @@ header {
 }
 .work-box-1 li {
   font-size: 0.95rem;
-  color: #8892b0;
+  color: var(--light-cream);
   list-style-type: none;
   margin-bottom: 10px;
 }
 
 .work-box-1 p {
   font-size: 0.95rem;
-  color: #8892b0;
+  color: var(--light-cream);
   text-align: justify;
 }
 
 .work-box-1 li::before {
   content: "▹";
   display: inline-block;
-  color: #64ffda;
+  color: var(--light-cyan);
   margin-right: 10px;
 }
 
@@ -555,7 +574,9 @@ header {
   background-color: #64ffdb14;
 }
 
-/* =============== project section ================ */
+/* Work Section Ends Here */
+
+/* Project Section Start Here */
 
 #project {
   margin-top: 200px;
@@ -603,17 +624,17 @@ header {
 }
 
 .project-title {
-  color: #64ffda;
+  color: var(--light-cyan);
 }
 
 .project-name {
-  color: #c8d2f2;
+  color: var(--light-gray);
 }
 
 .project-para-1 {
   margin-top: 30px;
   background-color: #112240;
-  color: #8892b0;
+  color: var(--light-cream);
   padding: 20px 15px 15px 0px;
   border-radius: 5px;
   font-size: 0.95rem;
@@ -623,7 +644,7 @@ header {
   display: flex;
   justify-content: flex-end;
   list-style: none;
-  color: #8892b0;
+  color: var(--light-cream);
   gap: 23px;
   margin-top: 10px;
   font-size: 0.95rem;
@@ -639,7 +660,7 @@ header {
 .project-para-2 {
   margin-top: 30px;
   background-color: #112240;
-  color: #8892b0;
+  color: var(--light-cream);
   padding: 20px 0px 15px 15px;
   border-radius: 5px;
   font-size: 0.95rem;
@@ -649,7 +670,7 @@ header {
   display: flex;
   justify-content: flex-start;
   list-style: none;
-  color: #8892b0;
+  color: var(--light-cream);
   gap: 23px;
   margin-top: 10px;
   font-size: 0.95rem;
@@ -665,23 +686,67 @@ header {
 .project-link-1 svg,
 .project-link-2 svg {
   width: 23px;
-  color: #c8d2f2;
+  color: var(--light-gray);
   transition: all 0.2s ease-in-out;
 }
 
 .project-link-1 svg:hover,
 .project-link-2 svg:hover {
-  color: #64ffda;
+  color: var(--light-cyan);
+}
+/* Project Section Ends Here */
+
+/* Contact Section Start Here */
+#contact {
+  width: 100vw;
+  height: 100vh;
 }
 
-.navbar-icon-box {
-  display: none;
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
 }
 
-.navbar-list-hidden {
-  display: none;
+.contact-container .sectionNumber {
+  color: var(--light-cyan);
+  font-size: 1rem;
 }
 
+.cta {
+  font-size: 3rem;
+  color: var(--light-gray);
+}
+
+.contact-container p {
+  font-size: 0.95rem;
+  color: var(--light-cream);
+  line-height: 1.5rem;
+}
+
+.contact-button {
+  padding: 15px 50px;
+  font-size: 0.95rem;
+  background: transparent;
+  border: none;
+  border-radius: 5px;
+  border: 1px solid var(--light-cyan);
+  color: var(--light-cyan);
+  transition: all 0.2s ease-in-out;
+}
+
+.contact-button:hover {
+  background-color: rgba(100, 255, 219, 0.08);
+}
+/* Contact Section Ends Here */
+
+/* Media Queries Start From Here */
 @media screen and (max-width: 1060px) {
   .about-para {
     width: 50%;
@@ -745,6 +810,9 @@ header {
   .project-box-text {
     width: 60%;
   }
+  .contact-container {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -779,8 +847,9 @@ header {
   .mywork {
     width: 80%;
   }
-  .project-image-box {
-    display: none;
+
+  .project-box-2 .project-img {
+    margin: 40px 0px;
   }
 
   .project-box-text {
@@ -844,21 +913,36 @@ header {
 
   .navbar-list-hidden ul li a {
     text-decoration: none;
-    color: #c8d2f2;
+    color: var(--light-gray);
     transition: all 0.2s ease-in-out;
   }
 
   .navbar-list-hidden ul li:hover a {
-    color: #64ffda;
+    color: var(--light-cyan);
   }
 
   .navbar-list-hidden ul li span {
-    color: #64ffda;
+    color: var(--light-cyan);
   }
 
   .header-btn {
     margin-top: 30px;
     margin-right: 20px;
+  }
+
+  .project-list-1,
+  .project-list-2 {
+    font-size: 0.8rem;
+  }
+
+  .project-list-2 {
+    gap: 16px;
+  }
+}
+
+@media screen and (max-width: 666px) {
+  .project-img {
+    display: none;
   }
 }
 
@@ -907,7 +991,7 @@ header {
 
   .slider-box li::before {
     content: "";
-    border-color: #64ffda;
+    border-color: var(--light-cyan);
     border-width: 1px;
     border-style: solid;
     height: 0px;
@@ -927,14 +1011,32 @@ header {
     width: 16%;
     height: 1.2px;
     opacity: 0.4;
-    background-color: #8892b0;
+    background-color: var(--light-cream);
+  }
+}
+
+@media screen and (max-width: 575px) {
+  #contact .contact-container {
+    gap: 20px;
+  }
+
+  .cta {
+    font-size: 2.5rem;
+  }
+
+  .contact-container p {
+    font-size: 0.8rem;
+  }
+
+  .contact-button {
+    font-size: 0.8rem;
   }
 }
 
 @media screen and (max-width: 400px) {
   .slider-box li::before {
     content: "";
-    border-color: #64ffda;
+    border-color: var(--light-cyan);
     border-width: 1px;
     border-style: solid;
     height: 0px;
@@ -965,77 +1067,19 @@ header {
     width: 90%;
   }
 }
+/* Media Queries Ends Here */
 
-/* contact */
-
-#contact {
-  width: 100vw;
-  height: 100vh;
+/* Scroll Bar CSS */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-.contact-container {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  height: 100%;
-  margin: auto;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  gap: 30px;
-}
-
-.contact-container .sectionNumber {
-  color: #64ffda;
-  font-size: 1rem;
-}
-
-.cta {
-  font-size: 3rem;
-  color: #c8d2f2;
-}
-
-.contact-container p {
-  font-size: 0.95rem;
-  color: #8892b0;
-  line-height: 1.5rem;
-}
-
-.contact-button {
-  padding: 15px 50px;
-  font-size: 0.95rem;
+::-webkit-scrollbar-track {
   background: transparent;
-  border: none;
-  border-radius: 5px;
-  border: 1px solid #64ffda;
-  color: #64ffda;
-  transition: all 0.2s ease-in-out;
 }
 
-.contact-button:hover {
-  background-color: rgba(100, 255, 219, 0.08);
+::-webkit-scrollbar-thumb {
+  background: #495670;
+  border-radius: 11px;
 }
-
-@media screen and (max-width: 950px) {
-  .contact-container {
-    width: 80%;
-  }
-}
-
-@media screen and (max-width: 575px) {
-  #contact .contact-container {
-    gap: 20px;
-  }
-
-  .cta {
-    font-size: 2.5rem;
-  }
-
-  .contact-container p {
-    font-size: 0.8rem;
-  }
-
-  .contact-button {
-    font-size: 0.8rem;
-  }
-}
+/* Scroll Bar Ends */

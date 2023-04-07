@@ -1,18 +1,18 @@
-$(".nav-tabs-dropdown")
-  .on("click", ".nav-link:not('.active')", function (event) {
-    $(this).closest("ul").removeClass("open");
-  })
-  .on("click", ".nav-link.active", function (event) {
-    $(this).closest("ul").toggleClass("open");
-  });
+// $(".nav-tabs-dropdown")
+//   .on("click", ".nav-link:not('.active')", function (event) {
+//     $(this).closest("ul").removeClass("open");
+//   })
+//   .on("click", ".nav-link.active", function (event) {
+//     $(this).closest("ul").toggleClass("open");
+//   });
 
 let navBar = document.querySelector(".navbar-icon-box");
-let navItems = document.querySelector(".navbar-list-hidden");
-// console.log((navItems.style.display = "none"));
+let navItems1 = document.querySelector(".navbar-list-hidden");
+let navItems2 = document.querySelector(".navbar-list");
 navBar.addEventListener("click", function () {
-  if (navItems.style.display === "none") {
-    navItems.style.display = "flex";
+  if (navItems1.style.display === "none") {
+    navItems1.style.display = "flex";
   } else {
-    navItems.style.display = "none";
+    navItems1.style.display = "none";
   }
 });
