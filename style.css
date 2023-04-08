@@ -121,10 +121,6 @@ header {
 .navbar-icon-box {
   display: none;
 }
-
-.navbar-list-hidden {
-  display: none;
-}
 /* Drop Down Item Ends Here */
 
 /* Home Section Start From Here */
@@ -394,14 +390,14 @@ header {
   color: var(--light-cyan);
   margin-right: 10px;
 }
-
+/* 
 .my-photo {
   width: 40%;
   position: relative;
 }
 
 .my-image-container {
-  max-width: 300px;
+  width: 300px;
   height: 300px;
 }
 
@@ -410,7 +406,7 @@ header {
   height: 300px;
   object-fit: revert;
   border-radius: 4px;
-  position: relative;
+  position: absolute;
   z-index: 2;
   filter: grayscale(100%);
   transition: all 0.2s ease-in-out;
@@ -442,7 +438,7 @@ header {
 
 .me-photo:hover .my-image-container::after {
   -webkit-transform: translateX(-10px) translateY(-10px);
-}
+} */
 /* About Section Ends Here */
 
 /* Work Section Start Here */
@@ -746,6 +742,43 @@ header {
 }
 /* Contact Section Ends Here */
 
+/* bottom social icons start here*/
+
+.bottom-social-icons {
+  display: none;
+}
+
+.bottom-social-icons ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.bottom-social-icons ul li a {
+  text-decoration: none;
+  color: var(--light-cream);
+}
+
+.bottom-social-icons ul li a svg {
+  transition: all 0.2s ease-in-out;
+}
+
+.bottom-social-icons ul li {
+  width: 20px;
+  list-style: none;
+  color: var(--light-cyan);
+  position: relative;
+}
+
+.bottom-social-icons ul li a svg:hover {
+  width: 20px;
+  color: var(--light-cyan);
+  transform: translateY(-3px);
+}
+
+/* bottom social icons ends here */
+
 /* Media Queries Start From Here */
 @media screen and (max-width: 1060px) {
   .about-para {
@@ -775,17 +808,23 @@ header {
     gap: 60px;
   }
 
-  .my-photo {
+  /* .my-photo {
     width: 50%;
     margin: 50px auto 0px;
-  }
+  } */
 
   .about-para {
     width: 100%;
   }
+  /* 
+  .me-photo {
+    width: 200px;
+    height: 200px;
+  } */
 
   .my-image-container::after {
     top: 5%;
+    left: 5%;
   }
 
   .about-list {
@@ -840,9 +879,9 @@ header {
     display: none;
   }
 
-  .my-photo {
+  /* .my-photo {
     width: 63%;
-  }
+  } */
 
   .mywork {
     width: 80%;
@@ -958,10 +997,10 @@ header {
     font-size: 0.8rem;
   }
 
-  .my-photo {
-    width: 100%;
+  /* .my-photo{
+    width: 90%;
     margin: auto;
-  }
+  } */
 
   .menu-bar-line::before {
     content: "";
@@ -1031,9 +1070,29 @@ header {
   .contact-button {
     font-size: 0.8rem;
   }
+
+  .aboutMe .sectionHeading {
+    font-size: 1.3rem;
+  }
+
+  .sectionHeading::after {
+    content: "";
+    display: inline-block;
+    width: 40%;
+    height: 1.2px;
+    opacity: 0.4;
+    background-color: #8892b0;
+  }
+
+  .about-list li {
+    font-size: 0.7rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
+  .navbar-list-hidden ul li {
+    font-size: 0.8rem;
+  }
   .slider-box li::before {
     content: "";
     border-color: var(--light-cyan);
@@ -1065,6 +1124,13 @@ header {
 
   .project-section {
     width: 90%;
+  }
+
+  .bottom-social-icons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }
 /* Media Queries Ends Here */
