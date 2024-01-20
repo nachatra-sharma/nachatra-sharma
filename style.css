@@ -6,6 +6,11 @@
   --light-cream: #8892b0;
 }
 
+::selection {
+  color: white;
+  background: #a9b6db63;
+}
+
 /* Universal CSS Code Start */
 * {
   margin: 0%;
@@ -76,6 +81,7 @@ header {
 }
 
 .navbar-list ul li a {
+  font-size: 0.8rem;
   text-decoration: none;
   color: var(--light-gray);
   transition: all 0.2s ease-in-out;
@@ -92,20 +98,21 @@ header {
   animation-delay: 0.1s;
 }
 .navbar-list ul .second-navbar-item {
-  animation-delay: 0.2s;
+  animation-delay: 0.15s;
 }
 .navbar-list ul .third-navbar-item {
-  animation-delay: 0.3s;
+  animation-delay: 0.2s;
 }
 .navbar-list ul .fourth-navbar-item {
-  animation-delay: 0.4s;
+  animation-delay: 0.25s;
 }
 
 .header-btn {
+  font-size: 0.8rem;
   border: 1px solid var(--light-cyan);
   background: transparent;
   color: var(--light-cyan);
-  padding: 10px 15px;
+  padding: 9px 18px;
   border-radius: 3px;
   cursor: pointer;
   animation-delay: 0.5s;
@@ -186,7 +193,7 @@ header {
 
 .home-btn {
   border: 1px solid var(--light-cyan);
-  padding: 15px 30px;
+  padding: 15px 80px;
   background: transparent;
   color: var(--light-cyan);
   font-size: 0.9rem;
@@ -246,7 +253,7 @@ header {
 /* Right Side Gmail Text */
 .right-gmail-container {
   position: fixed;
-  top: 72%;
+  bottom: 13%;
   right: -40px;
   transform: rotateZ(90deg);
 }
@@ -271,7 +278,8 @@ header {
 .mygmail p a {
   color: var(--light-cream);
   text-decoration: none;
-  font-size: 0.96rem;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
   transition: all 0.2s ease-in-out;
 }
 
@@ -536,20 +544,41 @@ header {
   margin: 40px auto;
 }
 
+.project-image-box {
+  position: relative;
+}
+
 .project-img {
-  width: 600px;
-  filter: blur(1px);
+  width: 100%;
+  height: 100%;
+}
+
+.overlay {
+  opacity: 1;
+  background-color:  rgba(59, 228, 188, 0.4);
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.project-image-box:hover .overlay{ 
+  opacity: 0;
 }
 
 .project-container {
   display: flex;
   flex-wrap: wrap;
   margin-top: 40px;
+  justify-content: space-between;
+  gap: 3rem;
 }
 
 .project-box-1,
 .project-box-2 {
-  width: 50%;
+  width: 48%;
 }
 
 .project-box-2 img {
@@ -581,13 +610,41 @@ header {
 }
 
 .project-para-1 {
+  opacity: 0.9;
   margin-top: 30px;
   background-color: #112240;
   color: var(--light-cream);
   padding: 20px 15px 15px 0px;
   border-radius: 5px;
-  font-size: 0.95rem;
+  line-height: 1.5rem;
+  font-size: 0.9rem;
 }
+
+.project-para-1 span {
+  color: var(--light-cyan);
+  position: relative;
+}
+
+.project-para-1 span::after {
+  content: "";
+  transform: scaleX(0);
+  display: inline-block;
+  height: 1px;
+  background-color: var(--light-cyan);
+  position: absolute;
+  top: 100%;
+  left: 0%;
+  right: 0%;
+  bottom: 0%;
+  transition: all 0.5s ease-in-out;
+  transform-origin: left;
+}
+
+.project-para-1 span:hover::after {
+  transform: scaleX(1);
+}
+
+
 
 .project-list-1 {
   display: flex;
@@ -596,7 +653,7 @@ header {
   color: var(--light-cream);
   gap: 23px;
   margin-top: 10px;
-  font-size: 0.95rem;
+  font-size: 0.8rem;
 }
 
 .project-link-1 {
