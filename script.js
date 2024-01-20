@@ -1,10 +1,11 @@
 let navBar = document.querySelector(".navbar-icon-box");
-let navItems1 = document.querySelector(".navbar-list-hidden");
-let navItems2 = document.querySelector(".navbar-list");
+let navItems = document.querySelector(".navbar-list-hidden");
 navBar.addEventListener("click", function () {
-  if (navItems1.style.display === "none") {
-    navItems1.style.display = "flex";
+  if (navItems.classList.contains('navbar-list-hidden') ) {
+    navItems.classList.add('navbar-list-visible');
+    navItems.classList.remove('navbar-list-hidden');
   } else {
-    navItems1.style.display = "none";
+    navItems.classList.add('navbar-list-hidden');
+    navItems.classList.remove('navbar-list-visible');
   }
 });
