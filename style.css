@@ -198,7 +198,7 @@ header {
   color: var(--light-cyan);
   font-size: 0.9rem;
   opacity: 0.9;
-  max-width: 30%;
+  width: 30%;
   cursor: pointer;
   border-radius: 3px;
   margin-top: 10px;
@@ -806,10 +806,34 @@ header {
 
 /* bottom social icons ends here */
 
+.navbar-list-hidden { 
+  display: none;
+}
+
+@media screen and (max-width: 1506px) {
+  .project-container{
+    justify-content: center;
+  }
+
+  .project-box-1, .project-box-2 {
+    width: 80%;
+  }
+
+  .project-para-2 {
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .home-para {
+    width: 70%;
+  }
+}
+
 /* Media Queries Start From Here */
 @media screen and (max-width: 1060px) {
   .about-para {
-    width: 50%;
+    width: 70%;
   }
   .name {
     font-size: 3rem;
@@ -817,11 +841,6 @@ header {
 
   .myskills {
     font-size: 3rem;
-  }
-
-  .project-box-2 img {
-    margin-left: -200px;
-    min-width: 600px;
   }
 
   .project-list-1 {
@@ -850,24 +869,12 @@ header {
   .about-list li {
     font-size: 0.8rem;
   }
-
-  .project-list-1 {
-    gap: 10px;
-  }
-
-  .project-image-box {
-    width: 40%;
-  }
-
-  .project-box-2 img {
-    margin-left: -300px;
-  }
-
-  .project-box-text {
-    width: 60%;
-  }
   .contact-container {
     width: 80%;
+  }
+
+  .right-gmail-container {
+    right: -70px;
   }
 }
 
@@ -882,7 +889,7 @@ header {
     width: 70%;
   }
   .home-btn {
-    max-width: 50%;
+    width: 70%;
     padding: 13px 28px;
     font-size: 0.85rem;
   }
@@ -950,9 +957,10 @@ header {
   }
 
   .navbar-list-visible {
+    font-size: 0.9rem;
     width: 50%;
     position: absolute;
-    height: 91.3%;
+    height: 91.4%;
     backdrop-filter: blur(5px);
     overflow: hidden;
     right: 50%;
@@ -1012,8 +1020,8 @@ header {
     color: var(--light-cyan);
   }
 
-
   .header-btn {
+    padding: 12px 50px;
     margin-top: 30px;
     margin-right: 20px;
   }
@@ -1026,6 +1034,17 @@ header {
   .project-list-2 {
     gap: 16px;
   }
+
+  .project-box-1, .project-box-2 {
+    width: 100%;
+  }
+
+  .bottom-social-icons {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 @media screen and (max-width: 666px) {
@@ -1037,7 +1056,13 @@ header {
 @media screen and (max-width: 600px) {
   .home-para {
     width: 85%;
-    line-height: 1.2rem;
+    line-height: 1.6rem;
+    font-size: 0.9rem;
+  }
+
+
+  .about-para p {
+    font-size: 0.9rem;
   }
 
   .home-btn {
@@ -1099,6 +1124,11 @@ header {
 }
 
 @media screen and (max-width: 575px) {
+  .work-task li {
+    font-size: 0.9rem;
+    line-height: 1.7rem; 
+
+  }
   #contact .contact-container {
     gap: 20px;
   }
@@ -1130,6 +1160,10 @@ header {
 
   .about-list li {
     font-size: 0.7rem;
+  }
+
+  .header-btn {
+    padding: 10px 33px;
   }
 }
 
@@ -1191,13 +1225,6 @@ header {
     width: 90%;
   }
 
-  .bottom-social-icons {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-  }
-
   .project-para-1, .project-para-2 {
     text-align: justify;
     font-size: 0.8rem;
@@ -1214,7 +1241,16 @@ header {
     position: absolute;
   }
 
+  .work-task li {
+    font-size: 0.85rem;
+    line-height: 1.5rem; 
+  }
+
+  .contact-container {
+    width: 85%;
+  }
 }
+
 /* Media Queries Ends Here */
 
 /* Scroll Bar CSS */
