@@ -16,6 +16,7 @@
   margin: 0%;
   padding: 0%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 #wrapper {
@@ -828,6 +829,10 @@ header {
   .home-para {
     width: 70%;
   }
+
+  .home-btn {
+    width: 50%;
+  }
 }
 
 /* Media Queries Start From Here */
@@ -1060,6 +1065,9 @@ header {
     font-size: 0.9rem;
   }
 
+  .slider-box li {
+    padding: 0px;
+  }
 
   .about-para p {
     font-size: 0.9rem;
