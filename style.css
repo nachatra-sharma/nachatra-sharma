@@ -688,7 +688,6 @@ header {
   transform: scaleX(1);
 }
 
-
 .project-list-2 {
   display: flex;
   justify-content: flex-start;
@@ -807,16 +806,17 @@ header {
 
 /* bottom social icons ends here */
 
-.navbar-list-hidden { 
+.navbar-list-hidden {
   display: none;
 }
 
 @media screen and (max-width: 1506px) {
-  .project-container{
+  .project-container {
     justify-content: center;
   }
 
-  .project-box-1, .project-box-2 {
+  .project-box-1,
+  .project-box-2 {
     width: 80%;
   }
 
@@ -1040,7 +1040,8 @@ header {
     gap: 16px;
   }
 
-  .project-box-1, .project-box-2 {
+  .project-box-1,
+  .project-box-2 {
     width: 100%;
   }
 
@@ -1134,8 +1135,7 @@ header {
 @media screen and (max-width: 575px) {
   .work-task li {
     font-size: 0.9rem;
-    line-height: 1.7rem; 
-
+    line-height: 1.7rem;
   }
   #contact .contact-container {
     gap: 20px;
@@ -1233,7 +1233,8 @@ header {
     width: 90%;
   }
 
-  .project-para-1, .project-para-2 {
+  .project-para-1,
+  .project-para-2 {
     text-align: justify;
     font-size: 0.8rem;
     padding: 15px;
@@ -1251,7 +1252,7 @@ header {
 
   .work-task li {
     font-size: 0.85rem;
-    line-height: 1.5rem; 
+    line-height: 1.5rem;
   }
 
   .contact-container {
